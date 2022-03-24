@@ -9,8 +9,9 @@ public class PostService {
         this.postDAO = postDAO;
     }
 
-    public void addUser(String nom) {
+    public String addUser(String nom) {
         postDAO.addUser( nom );
+        return nom;
     }
 
     public void addComment(String commenteurId, String postId, String commentaire) {

@@ -2,6 +2,7 @@ package INTRA;
 
 import INTRA.persistence.PostRepository;
 import INTRA.service.PostService;
+import lombok.val;
 import lombok.var;
 
 public class Main {
@@ -11,7 +12,7 @@ public class Main {
         var posteurId = postService.addUser( "Posteur1" );
         var commenteurID = postService.addUser( "Commentateur1" );
         var postId = postService.addUser( "Mon 1er post" );
-        postService.addComment(commenteurID, postId, "Mon commentaire");
+        //postService.addComment(commenteurID, postId, "Mon commentaire");
 
     }
 }

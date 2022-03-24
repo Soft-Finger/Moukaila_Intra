@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 
@@ -19,8 +20,12 @@ public class Post {
     @Column(name = "id", nullable = false)
     private Long id;
 
+    private Date datepost;
     private String postData ;
+    @ManyToOne
+    private User user;
+
     @OneToMany(mappedBy = "post")
-    private List<User> listUsers = new ArrayList<>();
+    List<PostComment> postComments = new ArrayList<>();
 
 }
